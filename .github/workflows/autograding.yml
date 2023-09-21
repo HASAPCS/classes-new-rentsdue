@@ -1,0 +1,108 @@
+name: Java CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  testCarClass:
+    name: Test Car Class
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+
+    - name: Build with Gradle
+      run: ./gradlew build -x test
+
+    - name: Run test
+      run: ./gradlew test --tests "com.example.CarTest"
+
+  testRectangleClass:
+    name: Test Rectangle Class
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+
+    - name: Build with Gradle
+      run: ./gradlew build -x test
+
+    - name: Run test
+      run: ./gradlew test --tests "com.example.RectangleTest"
+
+  testStudentClass:
+    name: Test Student Class
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+
+    - name: Build with Gradle
+      run: ./gradlew build -x test
+
+    - name: Run test
+      run: ./gradlew test --tests "com.example.StudentTest"
+
+  testBankAccountClass:
+    name: Test Bank Account Class
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+
+    - name: Build with Gradle
+      run: ./gradlew build -x test
+
+    - name: Run test
+      run: ./gradlew test --tests "com.example.BankAccountTest"
+
+  testClockClass:
+    name: Test Clock Class
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+
+    - name: Build with Gradle
+      run: ./gradlew build -x test
+
+    - name: Run test
+      run: ./gradlew test --tests "com.example.ClockTest"
