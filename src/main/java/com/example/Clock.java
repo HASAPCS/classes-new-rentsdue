@@ -11,10 +11,9 @@ public class Clock {
 
     public void addMinutes(int minutes) {
         this.minutes +=minutes;
-        if (this.minutes>=60){
-            this.minutes -=60;
-            this.hours+=1;
-        }
+        int addhours= this.minutes/60;
+        this.hours += addhours;
+        this.minutes %= 60;
     }
     
     public String getTime() {
