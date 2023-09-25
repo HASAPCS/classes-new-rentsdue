@@ -20,7 +20,11 @@ public class Clock {
     public String getTime() {
         if (this.hours>12){
             this.hours -=12;
-            return "0"+this.hours+":"+this.minutes;
+            if (this.hours>=10){
+                return this.hours+":"+this.minutes;
+            } else {
+                return "0"+this.hours+":"+this.minutes;
+            }
         }
     return this.hours+":"+this.minutes;
     }
