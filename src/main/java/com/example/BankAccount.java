@@ -13,9 +13,12 @@ public class BankAccount {
 
     public void withdraw(double amount) {
         this.balance -=amount;
+        if (this.balance<0){
+            this.balance+=amount;
+        }
     }
 
     public double getBalance() {
-        return this.balance;  // Change this default return statement
+        return this.balance;
     }
 }

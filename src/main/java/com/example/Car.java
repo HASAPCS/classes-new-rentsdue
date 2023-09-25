@@ -8,17 +8,17 @@ public class Car {
     }
 
     public void speedUp(int increment) {
-       this.speed += increment;
+        this.speed +=increment;
     }
 
     public void slowDown(int decrement) {
-        this.speed -= decrement;
-        if (this.speed-decrement>0){
-            this.speed=speed;
+        this.speed -=decrement;
+        if (this.speed<0){
+            this.speed +=decrement;
         }
     }
-
+    
     public int currentSpeed() {
-        return this.speed;  
+        return this.speed;
     }
 }

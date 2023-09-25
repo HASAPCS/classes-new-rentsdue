@@ -8,8 +8,6 @@ public class Student {
     }
 
     public String grade() {
-        // TODO: Calculate and return the grade based on the score. 
-        // Use the following grading scale:
         if (90<=this.score && this.score<=100){
             return "A";
         } else if (80<=this.score && this.score<=89){
@@ -18,8 +16,7 @@ public class Student {
             return "C";
         } else if (60<=this.score && this.score<=69){
             return "D";
-        }
-        else {
+        } else {
             return "F";
         }
     }
