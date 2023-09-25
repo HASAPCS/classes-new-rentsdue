@@ -25,6 +25,5 @@ public class Clock {
     return this.hours+":"+this.minutes;
     }
 
-    
 }
     
